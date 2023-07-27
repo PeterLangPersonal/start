@@ -1,6 +1,6 @@
 export enum headerTypes {
-    HOME = 'Home',
+    HOME = 'Start',
     PROJECTS = 'Projects',
-    ABOUT = 'About Me',
+    ABOUT = 'About',
     CONTACT = 'Contact',
 };
