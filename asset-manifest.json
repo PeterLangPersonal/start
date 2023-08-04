@@ -1,16 +1,31 @@
 {
   "files": {
     "main.css": "/start/static/css/main.960911db.css",
-    "main.js": "/start/static/js/main.b57ae383.js",
+    "main.js": "/start/static/js/main.687a80c4.js",
     "static/js/787.106db3e6.chunk.js": "/start/static/js/787.106db3e6.chunk.js",
-    "static/media/hero.jpg": "/start/static/media/hero.80db1907eb2e27d1c617.jpg",
+    "static/media/pexels-moose-photos-1037992.png": "/start/static/media/pexels-moose-photos-1037992.76210718d039ebbeddf7.png",
+    "static/media/c-logo-svgrepo-com.svg": "/start/static/media/c-logo-svgrepo-com.34527f88d54e69c64b4d700119c1302d.svg",
+    "static/media/go-svgrepo-com.svg": "/start/static/media/go-svgrepo-com.bba620d13bb4e2c4c0d102d3ef91e93b.svg",
+    "static/media/aws-svgrepo-com.svg": "/start/static/media/aws-svgrepo-com.e10a5fecc9dcbf1e029965e719e01e47.svg",
+    "static/media/react-svgrepo-com.svg": "/start/static/media/react-svgrepo-com.f57b349b4d9df56c9b48c916a8d5adfb.svg",
+    "static/media/css-file-format-document-extension-file-format-svgrepo-com.svg": "/start/static/media/css-file-format-document-extension-file-format-svgrepo-com.3d7da528cd0acc0896442892efb3fb2b.svg",
+    "static/media/sql-file-format-svgrepo-com.svg": "/start/static/media/sql-file-format-svgrepo-com.e2345086d43c1b17b077491a4761b0c5.svg",
+    "static/media/java-svgrepo-com.svg": "/start/static/media/java-svgrepo-com.3d1f1777f72c1a4ca3003a5378491322.svg",
+    "static/media/python-svgrepo-com.svg": "/start/static/media/python-svgrepo-com.4298525c028749eb4fa154f8f5bd1931.svg",
+    "static/media/javascript-svgrepo-com.svg": "/start/static/media/javascript-svgrepo-com.0866c81b3b841c647e23b8a5d991c312.svg",
+    "static/media/node-svgrepo-com.svg": "/start/static/media/node-svgrepo-com.0b3b0b7e1140ae4abc1ba6204ed57075.svg",
+    "static/media/html5-01-svgrepo-com.svg": "/start/static/media/html5-01-svgrepo-com.971e51be42aafa7db8fbf4510b204db8.svg",
+    "static/media/typescript-logo-svgrepo-com.svg": "/start/static/media/typescript-logo-svgrepo-com.250981d1e26a632d08ab7cf18b210da3.svg",
+    "static/media/docker-svgrepo-com.svg": "/start/static/media/docker-svgrepo-com.402471a8309d58457b2412d97000f7cb.svg",
+    "static/media/git-svgrepo-com.svg": "/start/static/media/git-svgrepo-com.515d8aef0243ec3d11e1f42a189a34d2.svg",
+    "static/media/django-svgrepo-com.svg": "/start/static/media/django-svgrepo-com.c53d7b212d9f61013c22718e7ea29987.svg",
     "index.html": "/start/index.html",
     "main.960911db.css.map": "/start/static/css/main.960911db.css.map",
-    "main.b57ae383.js.map": "/start/static/js/main.b57ae383.js.map",
+    "main.687a80c4.js.map": "/start/static/js/main.687a80c4.js.map",
     "787.106db3e6.chunk.js.map": "/start/static/js/787.106db3e6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.960911db.css",
-    "static/js/main.b57ae383.js"
+    "static/js/main.687a80c4.js"
   ]
 }
