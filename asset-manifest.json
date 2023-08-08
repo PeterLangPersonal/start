@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/start/static/css/main.960911db.css",
-    "main.js": "/start/static/js/main.99b3efbd.js",
+    "main.js": "/start/static/js/main.1d7bd435.js",
     "static/js/787.106db3e6.chunk.js": "/start/static/js/787.106db3e6.chunk.js",
     "static/media/pexels-moose-photos-1037992.png": "/start/static/media/pexels-moose-photos-1037992.76210718d039ebbeddf7.png",
     "static/media/androidphones-2048px-N20front.webp": "/start/static/media/androidphones-2048px-N20front.7a533df6f2cd32be6d2e.webp",
@@ -22,11 +22,11 @@
     "static/media/django-svgrepo-com.svg": "/start/static/media/django-svgrepo-com.c53d7b212d9f61013c22718e7ea29987.svg",
     "index.html": "/start/index.html",
     "main.960911db.css.map": "/start/static/css/main.960911db.css.map",
-    "main.99b3efbd.js.map": "/start/static/js/main.99b3efbd.js.map",
+    "main.1d7bd435.js.map": "/start/static/js/main.1d7bd435.js.map",
     "787.106db3e6.chunk.js.map": "/start/static/js/787.106db3e6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.960911db.css",
-    "static/js/main.99b3efbd.js"
+    "static/js/main.1d7bd435.js"
   ]
 }
