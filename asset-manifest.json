@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/start/static/css/main.960911db.css",
-    "main.js": "/start/static/js/main.ddf770a9.js",
+    "main.js": "/start/static/js/main.e85979ca.js",
     "static/js/787.106db3e6.chunk.js": "/start/static/js/787.106db3e6.chunk.js",
     "static/media/pexels-moose-photos-1037992.png": "/start/static/media/pexels-moose-photos-1037992.76210718d039ebbeddf7.png",
     "static/media/c-logo-svgrepo-com.svg": "/start/static/media/c-logo-svgrepo-com.34527f88d54e69c64b4d700119c1302d.svg",
@@ -22,11 +22,11 @@
     "static/media/django-svgrepo-com.svg": "/start/static/media/django-svgrepo-com.c53d7b212d9f61013c22718e7ea29987.svg",
     "index.html": "/start/index.html",
     "main.960911db.css.map": "/start/static/css/main.960911db.css.map",
-    "main.ddf770a9.js.map": "/start/static/js/main.ddf770a9.js.map",
+    "main.e85979ca.js.map": "/start/static/js/main.e85979ca.js.map",
     "787.106db3e6.chunk.js.map": "/start/static/js/787.106db3e6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.960911db.css",
-    "static/js/main.ddf770a9.js"
+    "static/js/main.e85979ca.js"
   ]
 }
