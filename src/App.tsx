@@ -1,19 +1,23 @@
 import React from 'react';
 import { Footer, Header } from './components';  
-import { Routes, Route } from 'react-router-dom';
-import { About, Contact, Home, Projects } from './pages';
+import { Contact, Home, Projects } from './pages';
+import { AppWrapper } from './App.styles';
+import { pages } from './types';
+import { useAppContext } from './utils';
+import { PageContext } from './context';
 
 function App() {
+  const { page } = useAppContext(PageContext);
+
   return (
     <>
       <Header/>
-      <Routes>
-        <Route path="/start" element={<Home/>}/>
-        <Route path="/about" element={<About/>}/>
-        <Route path="/contact" element={<Contact/>}/>
-        <Route path="/projects" element={<Projects/>}/>
-      </Routes>
-      <Footer/>
+      <AppWrapper>
+        {page === pages.START && <Home/>}
+        {page === pages.PROJECTS && <Projects/>}
+        {page === pages.CONTACT && <Contact/>}
+        <Footer/>
+      </AppWrapper>
     </>
   );
 }

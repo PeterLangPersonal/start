@@ -1,12 +1,13 @@
-import { About, Contact, Explore } from "./components"
-import { FooterWrapper } from "./footer.styles"
+import { Links } from "./components"
+import { FooterWrapper, Title } from "./footer.styles"
 
 export const Footer = () => {
     return(
         <FooterWrapper>
-            <About/>
-            <Explore/>
-            <Contact/>
+            <Title>
+                Peter Lang
+            </Title>
+            <Links/>
         </FooterWrapper>
     )
 }

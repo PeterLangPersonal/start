@@ -7,5 +7,5 @@ export const Header = () => {
             <MainIcon/>
             <Navigation/>
         </HeaderWrapper>
-    )
+    ) 
 }

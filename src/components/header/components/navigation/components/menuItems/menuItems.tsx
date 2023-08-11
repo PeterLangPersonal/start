@@ -1,21 +1,22 @@
-import { headerTypes } from "../../../../../types"
 import { ItemWrapper, TextWrapper } from "./menuItems.styles";
-import { Link } from 'react-router-dom';
+import { pages } from "../../../../../../types";
 
 type MenuItemProps = {
-    title: headerTypes;
+    title: pages;
+    onClick: () => void;
+    isActive: boolean;
 }
 
 export const MenuItem = ({
-    title
+    title,
+    onClick,
+    isActive = false,
 }: MenuItemProps) => {
     return(
-        <Link to={title.toLowerCase()}>
-            <ItemWrapper>
-                <TextWrapper>
-                    {title}
-                </TextWrapper>
-            </ItemWrapper>
-        </Link>
+        <ItemWrapper onClick={() => onClick()} isActive={isActive}>
+            <TextWrapper className="navigationItem">
+                {`${title.charAt(0).toUpperCase()}${title.substring(1).toLowerCase()}`}
+            </TextWrapper>
+        </ItemWrapper>
     )
 }

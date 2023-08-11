@@ -1,7 +1,7 @@
 export const Projects = () => {
     return(
         <div>
-            Projects page
+            Coming soon
         </div>
     )
 }
