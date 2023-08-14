@@ -81,7 +81,7 @@ export const Expertise = () => {
                 </Tooltip>
             </HeaderWrapper>
             <ContentWrapper>
-                {expertises.map((expertise) => <Card icon={expertise.icon} title={expertise.title}/>)}
+                {expertises.map((expertise) => <Card icon={expertise.icon} title={expertise.title} key={expertise.title}/>)}
             </ContentWrapper>
         </Wrapper> 
     )

@@ -1,8 +1,8 @@
 import { TimelineDot, Timeline, TimelineConnector } from '@mui/lab';
 import styled from 'styled-components';
 
-export const CustomDot = styled(TimelineDot)<{dotColor?: string}>`
-    border-color: ${props => props.dotColor? props.dotColor : "black"} !important;
+export const CustomDot = styled(TimelineDot)<{dotcolor?: string}>`
+    border-color: ${props => props.dotcolor? props.dotcolor : "black"} !important;
     height: 6px;
     width: 6px;
     border-width: 5px !important;
@@ -69,8 +69,8 @@ export const ArrowLeft = styled.div<{color?: string}>`
     border-right:50px solid ${props => props.color? props.color : "black"}; 
 `;
 
-export const CustomTimelineConnector = styled(TimelineConnector)<{lineColor?: string}>`
-    background-color: ${props => props.lineColor? props.lineColor : "transparent"} !important;
+export const CustomTimelineConnector = styled(TimelineConnector)<{linecolor?: string}>`
+    background-color: ${props => props.linecolor? props.linecolor : "transparent"} !important;
 `;
 
 export const OppositeContentWrapper = styled.div<{left?: boolean}>`

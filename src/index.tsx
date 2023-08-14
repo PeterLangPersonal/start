@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
-import { PageProvider } from './context';
+import { PageProvider, ProjectProvider } from './context';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -13,7 +13,9 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <PageProvider>
-        <App />
+        <ProjectProvider>
+          <App />
+        </ProjectProvider>
       </PageProvider>
     </BrowserRouter>
   </React.StrictMode>

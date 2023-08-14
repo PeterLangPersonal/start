@@ -16,7 +16,7 @@ export const IconList = ({
     return(
         <ListWrapper>
             {icons.map((icon: IconItem) => 
-                <ItemWrapper>
+                <ItemWrapper key={icon.body}>
                     {(icon.link && <>
                         <IconLink href={icon.link} target="_blank" rel="noreferrer">
                             <IconWrapper>{icon.icon}</IconWrapper>

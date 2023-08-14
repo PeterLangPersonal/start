@@ -37,6 +37,7 @@ export const NewTimeline = ({
                             left={i%2 !== 0}
                             prev={arr[i-1]}
                             last={arr.length-1 === i}
+                            key={i}
                         />
                     )
                 })
@@ -61,9 +62,9 @@ const NewTimelineItem = ({
                 </OppositeContentWrapper>
             </TimelineOppositeContent>
             <TimelineSeparator>
-                <CustomTimelineConnector lineColor={prev !== undefined? prev.color: undefined}/>
-                <CustomDot dotColor={item.color} variant="outlined" />
-                <CustomTimelineConnector lineColor={last ? undefined: item.color}/>
+                <CustomTimelineConnector linecolor={prev !== undefined? prev.color: undefined}/>
+                <CustomDot dotcolor={item.color} variant="outlined" />
+                <CustomTimelineConnector linecolor={last ? undefined: item.color}/>
             </TimelineSeparator>
             <TimelineContent>
                 <ContentWrapper left={left}>

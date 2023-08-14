@@ -15,12 +15,12 @@ export const Links = () => {
         <>
             <LinksWrapper>
                 {
-                    headerTitles.map((title, i, {length}) => <>
+                    headerTitles.map((title, i, {length}) => <div key={title}>
                         <TitleWrapper onClick={() => setPage(title)}>
                             {title.toLowerCase()}
                         </TitleWrapper>
                         {i !== length-1 && <Divider orientation="vertical"/>}
-                    </>)
+                    </div>)
                 }
             </LinksWrapper>
             <LinksWrapper>
