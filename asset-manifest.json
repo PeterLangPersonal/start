@@ -1,9 +1,10 @@
 {
   "files": {
     "main.css": "/start/static/css/main.960911db.css",
-    "main.js": "/start/static/js/main.e85979ca.js",
+    "main.js": "/start/static/js/main.0adc5e69.js",
     "static/js/787.106db3e6.chunk.js": "/start/static/js/787.106db3e6.chunk.js",
     "static/media/pexels-moose-photos-1037992.png": "/start/static/media/pexels-moose-photos-1037992.76210718d039ebbeddf7.png",
+    "static/media/androidphones-2048px-N20front.webp": "/start/static/media/androidphones-2048px-N20front.7a533df6f2cd32be6d2e.webp",
     "static/media/c-logo-svgrepo-com.svg": "/start/static/media/c-logo-svgrepo-com.34527f88d54e69c64b4d700119c1302d.svg",
     "static/media/go-svgrepo-com.svg": "/start/static/media/go-svgrepo-com.bba620d13bb4e2c4c0d102d3ef91e93b.svg",
     "static/media/aws-svgrepo-com.svg": "/start/static/media/aws-svgrepo-com.e10a5fecc9dcbf1e029965e719e01e47.svg",
@@ -22,11 +23,11 @@
     "static/media/django-svgrepo-com.svg": "/start/static/media/django-svgrepo-com.c53d7b212d9f61013c22718e7ea29987.svg",
     "index.html": "/start/index.html",
     "main.960911db.css.map": "/start/static/css/main.960911db.css.map",
-    "main.e85979ca.js.map": "/start/static/js/main.e85979ca.js.map",
+    "main.0adc5e69.js.map": "/start/static/js/main.0adc5e69.js.map",
     "787.106db3e6.chunk.js.map": "/start/static/js/787.106db3e6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.960911db.css",
-    "static/js/main.e85979ca.js"
+    "static/js/main.0adc5e69.js"
   ]
 }
