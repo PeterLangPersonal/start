@@ -1,6 +1,6 @@
-import { BlueSectionWrapper, BlueWhiteTransition, PageWrapper, PinkBlueTransition, PinkSectionWrapper } from "../pages.styles"
+import { BlueSectionWrapper, BlueWhiteTransition, PageWrapper, PinkBlueTransition, PinkSectionWrapper, Text } from "../pages.styles"
 import { ProjectCard } from "./components";
-import { BackButton, ProjectsWrapper } from "./projects.styles";
+import { BackButton, ContentWrapper, Header, LabelWrapper, ProjectsWrapper } from "./projects.styles";
 import phone from '../../assets/androidphones-2048px-N20front.webp'
 import { useAppContext } from "../../utils";
 import { ProjectContext } from "../../context";
@@ -36,7 +36,16 @@ export const Projects = () => {
             {project === projects.SPEECH_TO_TEXT && <SpeechToText/>}
             {project === undefined && <>
                 <PinkSectionWrapper>
-                    Coming Soon
+                    <ContentWrapper>
+                        <LabelWrapper>
+                            <Text>
+                                PROJECTS
+                            </Text>
+                            <Header>
+                                A collection of applications I have built for demos and personal use.
+                            </Header>
+                        </LabelWrapper>
+                    </ContentWrapper>
                 </PinkSectionWrapper>
                 <PinkBlueTransition/>
                 <BlueSectionWrapper>

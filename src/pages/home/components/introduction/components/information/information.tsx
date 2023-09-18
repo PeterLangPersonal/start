@@ -19,7 +19,7 @@ export const Information = () => {
         }, {
             icon: <LinkedInIcon/>,
             body: "LinkedIn",
-            link: "https://www.linkedin.com/in/peter-yq-lang/",
+            link: "https://www.linkedin.com/in/ceres-lang/",
         }, {
             icon: <GitHubIcon/>,
             body: "Github",

@@ -5,7 +5,7 @@ export const Footer = () => {
     return(
         <FooterWrapper>
             <Title>
-                Peter Lang
+                Ceres Lang
             </Title>
             <Links/>
         </FooterWrapper>

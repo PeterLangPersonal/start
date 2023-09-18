@@ -14,7 +14,7 @@ export const MainIcon = () => {
                 <Image src={icon} alt={"mainicon"}/>
             </IconWrapper>
             <TextWrapper>
-                <Title>Peter Lang's</Title>
+                <Title>Ceres Lang's</Title>
                 <Subtitle>Personal Website</Subtitle>
             </TextWrapper>
         </MainIconWrapper>

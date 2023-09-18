@@ -7,7 +7,7 @@ export const PageWrapper = styled.div`
 
 export const SectionWrapper = styled.div`
     padding: 36px calc((100vw - 1500px)/2);
-    min-height: 360px;
+    min-height: 376px;
     overflow: hidden;
     position: relative;
     display: flex;

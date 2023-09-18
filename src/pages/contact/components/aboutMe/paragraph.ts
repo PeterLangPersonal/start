@@ -1,4 +1,4 @@
-export const paragraph = `I'm Peter Lang, a passionate and dedicated software developer with a love for crafting elegant and efficient solutions to complex problems. I believe that technology has the power to transform ideas into reality, and I'm on a mission to create meaningful digital experiences that make a positive impact.
+export const paragraph = `I'm Ceres Lang, a passionate and dedicated software developer with a love for crafting elegant and efficient solutions to complex problems. I believe that technology has the power to transform ideas into reality, and I'm on a mission to create meaningful digital experiences that make a positive impact.
 
 From a young age, I've been fascinated by the ever-evolving world of code and its potential to reshape the way we interact with the world. I embarked on my journey as a software developer with a burning curiosity and a determination to learn and grow.
 
