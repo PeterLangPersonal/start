@@ -52,6 +52,7 @@ export const Calculator = () => {
     }
 
     const onClickOperation = (operation: string) => {
+        console.log(state.currOperand);
         if(operation === 'AC') {
             setState({
                 prevOperand: null,
@@ -61,7 +62,7 @@ export const Calculator = () => {
         } else if (operation === 'DEL') {
             setState({
                 ...state,
-                currOperand: state.currOperand.length === 1? '0' : state.currOperand.slice(0, -1),
+                currOperand: state.currOperand.length === 1 || state.currOperand.slice(0, -1) === '-' ? '0' : state.currOperand.slice(0, -1),
             });
         } else if(state.operation) {
             setState({

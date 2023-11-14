@@ -6,6 +6,7 @@ export const DisplayWrapper = styled.div`
     display: flex;
     flex-direction: column;
     padding: 8px;
+    overflow: hidden;
 `;
 
 export const ValueWrapper = styled.div`
@@ -16,6 +17,7 @@ export const ValueWrapper = styled.div`
     align-items: center;
     justify-content: flex-end;
     font-weight: 600;
+    overflow: hidden;
 `;
 
 export const PrevValueWrapper = styled(ValueWrapper)`
