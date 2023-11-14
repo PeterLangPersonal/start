@@ -8,6 +8,7 @@ interface IProviderProps {
 type PageContextValues = {
     page: pages;
     setPage: Dispatch<SetStateAction<pages>>;
+    isMobile: boolean;
 };
 
 export const PageContext = createContext<PageContextValues | undefined>(undefined);
@@ -15,6 +16,20 @@ export const PageContext = createContext<PageContextValues | undefined>(undefine
 export const PageProvider = (props: IProviderProps) => {
     const [page, setPage] = useState<pages>(localStorage.getItem('page') as pages || pages.START);
 
+    const [width, setWidth] = useState<number>(window.innerWidth);
+
+    function handleWindowSizeChange() {
+        setWidth(window.innerWidth);
+    }
+    useEffect(() => {
+        window.addEventListener('resize', handleWindowSizeChange);
+        return () => {
+            window.removeEventListener('resize', handleWindowSizeChange);
+        }
+    }, []);
+  
+    const isMobile = width <= 768;
+    
     useEffect(() => {
         localStorage.setItem('page', page);
     }, [ page ]);
@@ -23,6 +38,7 @@ export const PageProvider = (props: IProviderProps) => {
         <PageContext.Provider value={{
             page,
             setPage,
+            isMobile,
         }}>
             {props.children}
         </PageContext.Provider>

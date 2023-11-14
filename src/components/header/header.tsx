@@ -1,8 +1,13 @@
 import { MainIcon, Navigation } from "./components";
+import { NavDrawer } from "./components/navDrawer";
 import { HeaderWrapper } from "./header.styles";
 
-export const Header = () => {
-    return(
+type HeaderProps = {
+    isMobile?: boolean;
+};
+
+export const Header = ({isMobile = false}: HeaderProps) => {
+    return(isMobile ? <NavDrawer/>: 
         <HeaderWrapper>
             <MainIcon/>
             <Navigation/>

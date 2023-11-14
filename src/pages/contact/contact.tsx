@@ -2,21 +2,30 @@ import { BlueSectionWrapper, BlueWhiteTransition, HeaderWrapper, PageWrapper, Pi
 import { AboutMe } from "./components"
 import { ContentWrapper, ListWrapper, Header, LabelWrapper } from "./contact.styles";
 import { Information } from "../home/components/introduction/components";
+import { useAppContext } from "../../utils";
+import { PageContext } from "../../context";
 
 export const Contact = () => {
+    const { isMobile } = useAppContext(PageContext);
+
     return(
         <PageWrapper>
             <PinkSectionWrapper>
-                <ContentWrapper>
+                <ContentWrapper isMobile={isMobile}>
                     <LabelWrapper>
-                        <Text>
+                        {isMobile? <HeaderWrapper>
+                            <Title>
+                                Contact Me
+                            </Title>
+                        </HeaderWrapper>
+                        : <Text>
                             CONTACT ME
-                        </Text>
-                        <Header>
+                        </Text>}
+                        {!isMobile && <Header>
                             Got a question? Reach out and I will answer ASAP!
-                        </Header>
+                        </Header>}
                     </LabelWrapper>
-                    <ListWrapper>
+                    <ListWrapper isMobile={isMobile}>
                         <Information/>
                     </ListWrapper>
                 </ContentWrapper>
@@ -28,7 +37,7 @@ export const Contact = () => {
                         About Me
                     </Title>
                 </HeaderWrapper>
-                <ContentWrapper>
+                <ContentWrapper isMobile={isMobile}>
                     <AboutMe/>
                 </ContentWrapper>
             </BlueSectionWrapper>

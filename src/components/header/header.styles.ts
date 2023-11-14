@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const HeaderWrapper = styled.div`
-    width: 100%;
+    width: 100vw;
     height: 11vh;
     background: linear-gradient(0deg, rgba(254,244,249,0) 0%, rgba(244,196,222,1) 100%);
     display: flex;

@@ -11,7 +11,7 @@ export const SpeechToText = () => {
       } = useSpeechRecognition();
 
     const [ sentences, setSentences ] = useState<string[]>([]);
-    const [micInput, setMicInput] = useState('');
+    const [ micInput, setMicInput ] = useState('');
 
     useEffect(() => {
         SpeechRecognition.stopListening();

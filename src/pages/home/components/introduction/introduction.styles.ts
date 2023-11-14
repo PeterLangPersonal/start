@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Text } from '../../../pages.styles';
 
-export const ContentWrapper = styled.div`
+export const ContentWrapper = styled.div<{isMobile?: boolean}>`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -9,10 +9,13 @@ export const ContentWrapper = styled.div`
     border-radius: 15px;
     z-index: 99;
     position: relative;
+    flex-wrap: wrap;
+    margin-top: ${props => props.isMobile && "-80%"};
 `;
 
 export const TextWrapper = styled.div`
     width: 30%;
+    min-width: 360px;
     display: flex;
     flex-direction: column;
 `;

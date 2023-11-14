@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const MainIconWrapper = styled.div`
     width: 30%;
-    margin-left: 364px;
+    margin-left: max(0px, calc((100vw - 1832px)/2));
     text-align: left;
     display: flex;
     flex-direction: row;

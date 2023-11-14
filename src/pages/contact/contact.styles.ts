@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
-export const ContentWrapper = styled.div`
+export const ContentWrapper = styled.div<{isMobile: boolean}>`
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: ${props => props.isMobile? "center": "space-between"};
+    flex-wrap: wrap;
 `;
 
 export const LabelWrapper = styled.div`
@@ -12,11 +13,11 @@ export const LabelWrapper = styled.div`
     justify-content: center;
 `;
 
-export const ListWrapper = styled.div`
+export const ListWrapper = styled.div<{isMobile: boolean}>`
     background-color: white;
     border-radius: 15px;
     padding: 56px 24px;
-    margin-left: 24px;
+    margin-left: ${props => props.isMobile? "0px": "24px"};
 `;
 
 export const Header = styled.div`

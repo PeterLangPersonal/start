@@ -14,6 +14,7 @@ type Content = {
 type TimelineProps = {
     position?: "left" | "right" | "alternate" | "alternate-reverse" | undefined;
     content: Content[];
+    isMobile?: boolean;
 }
 
 type TimelineItemProps = {
@@ -21,11 +22,13 @@ type TimelineItemProps = {
     left?: boolean;
     prev: Content;
     last?: boolean;
+    isMobile: boolean;
 }
 
 export const NewTimeline = ({
     position = "alternate",
     content,
+    isMobile = false,
 }: TimelineProps) => {
     return(
         <CustomTimeline position={position}>
@@ -38,6 +41,7 @@ export const NewTimeline = ({
                             prev={arr[i-1]}
                             last={arr.length-1 === i}
                             key={i}
+                            isMobile={isMobile}
                         />
                     )
                 })
@@ -51,14 +55,15 @@ const NewTimelineItem = ({
     prev, 
     left = true,
     last = false,
+    isMobile,
 }: TimelineItemProps) => {
     return(
         <TimelineItem>
             <TimelineOppositeContent>
                 <OppositeContentWrapper left={left}>
-                    {!left && <IconWrapper color={item.color} secondaryColor={item.secondaryColor}>{item.icon}</IconWrapper>}
+                    {!left && <IconWrapper color={item.color} secondaryColor={item.secondaryColor}>{isMobile? item.date: item.icon}</IconWrapper>}
                     <LineSeparator left={left} />
-                    {left && <IconWrapper color={item.color} secondaryColor={item.secondaryColor}>{item.icon}</IconWrapper>}
+                    {left && <IconWrapper color={item.color} secondaryColor={item.secondaryColor}>{isMobile? item.date: item.icon}</IconWrapper>}
                 </OppositeContentWrapper>
             </TimelineOppositeContent>
             <TimelineSeparator>
@@ -68,14 +73,14 @@ const NewTimelineItem = ({
             </TimelineSeparator>
             <TimelineContent>
                 <ContentWrapper left={left}>
-                    <DateWrapper color={item.secondaryColor}>
+                    {!isMobile && <DateWrapper color={item.secondaryColor}>
                         {item.date}
-                    </DateWrapper>
+                    </DateWrapper>}
                     <BodyWrapper left={left} color={item.color} secondaryColor={item.secondaryColor}>
-                        <Position>{item.subtitle}</Position>
-                        <Location>{item.label}</Location>
+                        <Position isMobile={isMobile}>{item.subtitle}</Position>
+                        <Location isMobile={isMobile}>{item.label}</Location>
                     </BodyWrapper>
-                    {left? <ArrowRight color={item.color}/>: <ArrowLeft color={item.color}/>}
+                    {!isMobile && (left? <ArrowRight color={item.color}/>: <ArrowLeft color={item.color}/>)}
                 </ContentWrapper>
             </TimelineContent>
         </TimelineItem>

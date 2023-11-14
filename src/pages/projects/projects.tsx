@@ -3,9 +3,9 @@ import { ProjectCard } from "./components";
 import { BackButton, ContentWrapper, Header, LabelWrapper, ProjectsWrapper } from "./projects.styles";
 import phone from '../../assets/androidphones-2048px-N20front.webp'
 import { useAppContext } from "../../utils";
-import { ProjectContext } from "../../context";
+import { PageContext, ProjectContext } from "../../context";
 import { projects } from "../../types";
-import { SpeechToText } from "../../projects";
+import { Calculator, SpeechToText } from "../../projects";
 
 type project = {
     title: string;
@@ -14,11 +14,14 @@ type project = {
 
 export const Projects = () => {
     const { project, setProject } = useAppContext(ProjectContext);
+    const { isMobile } = useAppContext(PageContext);
 
     const projectCards = [
         {
             title: projects.SPEECH_TO_TEXT,
             imageUrl: phone,
+        }, {
+            title: projects.CALCULATOR,
         }
     ];
 
@@ -34,8 +37,9 @@ export const Projects = () => {
         }}>
             {project !== undefined && <BackButton onClick={() => setProject(undefined)}>←</BackButton>}
             {project === projects.SPEECH_TO_TEXT && <SpeechToText/>}
+            {project === projects.CALCULATOR && <Calculator/>}
             {project === undefined && <>
-                <PinkSectionWrapper>
+                <PinkSectionWrapper isMobile={isMobile}>
                     <ContentWrapper>
                         <LabelWrapper>
                             <Text>

@@ -1,10 +1,16 @@
 import { NewTimeline } from "../../components"
-import { PageWrapper, BlueSectionWrapper, PinkSectionWrapper, HeroSectionWrapper, HeaderWrapper, Title, BluePinkTransition, PinkWhiteTransition } from "../pages.styles"
+import { PageWrapper, BlueSectionWrapper, PinkSectionWrapper, HeroSectionWrapper, HeaderWrapper, Title, BluePinkTransition, PinkWhiteTransition, PinkBlueTransition } from "../pages.styles"
 import { Expertise, Introduction } from "./components";
 import { BackgroundImage, BackgroundImageWrapper, CustomBusinessIcon, CustomSchoolIcon } from "./home.styles";
 import hero from '../../assets/pexels-moose-photos-1037992.png';
+import { useAppContext } from "../../utils";
+import { PageContext } from "../../context";
+import { Information } from "./components/introduction/components";
+import icon from '../../assets/svg/logo.svg';
 
 export const Home = () => {
+    const { isMobile } = useAppContext(PageContext);
+
     const timelineContent = [
         {
             label: "Clutch Technology",
@@ -51,14 +57,30 @@ export const Home = () => {
         }
     ];
 
-    return(
-        <PageWrapper>
-            <HeroSectionWrapper>
-                <Introduction/>
+    const IntroSection = isMobile?
+        <>
+            <HeroSectionWrapper isMobile={isMobile}>
+                <Introduction isMobile={isMobile}/>
                 <BackgroundImageWrapper>
-                    <BackgroundImage src={hero} alt="Hero image"/>
+                    <BackgroundImage src={icon} alt="Hero image"/>
                 </BackgroundImageWrapper>
             </HeroSectionWrapper>
+            <PinkSectionWrapper isMobile={isMobile}>
+                <Information/>
+            </PinkSectionWrapper>
+            <PinkBlueTransition/>
+        </>
+        :
+        <HeroSectionWrapper>
+            <Introduction isMobile={isMobile}/>
+            <BackgroundImageWrapper>
+                <BackgroundImage src={hero} alt="Hero image"/>
+            </BackgroundImageWrapper>
+        </HeroSectionWrapper>;
+
+    return(
+        <PageWrapper>
+            {IntroSection}
             <BlueSectionWrapper>
                 <Expertise/>
             </BlueSectionWrapper>
@@ -67,7 +89,7 @@ export const Home = () => {
                 <HeaderWrapper>
                     <Title>Timeline Overview</Title>
                 </HeaderWrapper>
-                <NewTimeline content={timelineContent}/>
+                <NewTimeline content={timelineContent} isMobile={isMobile}/>
             </PinkSectionWrapper>
             <PinkWhiteTransition/>
         </PageWrapper>

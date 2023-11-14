@@ -5,7 +5,7 @@ export const PageWrapper = styled.div`
     position: relative;
 `;
 
-export const SectionWrapper = styled.div`
+export const SectionWrapper = styled.div<{isMobile?: boolean}>`
     padding: 36px calc((100vw - 1500px)/2);
     min-height: 376px;
     overflow: hidden;
@@ -13,6 +13,7 @@ export const SectionWrapper = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-left: ${props => props.isMobile && "8px"};
 `;
 
 export const PinkBlueTransition = styled.div`
@@ -49,6 +50,7 @@ export const WhiteSectionWrapper = styled(SectionWrapper)`
 
 export const HeroSectionWrapper = styled(SectionWrapper)`
     min-height: 480px;
+    height: ${props => props.isMobile && "100vh"};
 `
 
 export const HeaderWrapper = styled.div`

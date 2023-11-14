@@ -53,6 +53,7 @@ export const BodyWrapper = styled.div<{left?: boolean, color?: string, secondary
     color: white;
     font-family: Arvo;
     margin: 0 8px;
+    text-align: center;
 `;
 
 export const ArrowRight = styled.div<{color?: string}>`
@@ -113,10 +114,10 @@ export const Text = styled.p`
     cursor: default;
 `;
 
-export const Position = styled(Text)`
-    font-size: 26px;
+export const Position = styled(Text)<{isMobile?: boolean}>`
+    font-size: ${props => props.isMobile? "18px": "26px"};
 `
 
-export const Location = styled(Text)`
-    font-size: 18px
+export const Location = styled(Text)<{isMobile?: boolean}>`
+    font-size: ${props => props.isMobile? "14px": "20px"};
 `

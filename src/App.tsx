@@ -7,7 +7,7 @@ import { useAppContext } from './utils';
 import { PageContext, ProjectContext } from './context';
 
 function App() {
-  const { page } = useAppContext(PageContext);
+  const { page, isMobile } = useAppContext(PageContext);
   const { project } = useAppContext(ProjectContext);
 
   const [ hasHeader, setHasheader ] = useState(true);
@@ -18,8 +18,8 @@ function App() {
 
   return (
     <>
-      {!project && <Header/>}
-      <AppWrapper hasHeader={hasHeader}>
+      {!project && <Header isMobile={isMobile}/>}
+      <AppWrapper hasHeader={hasHeader} isMobile={isMobile}>
         {page === pages.START && <Home/>}
         {page === pages.PROJECTS && <Projects/>}
         {page === pages.CONTACT && <Contact/>}
