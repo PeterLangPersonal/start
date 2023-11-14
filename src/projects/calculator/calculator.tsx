@@ -65,7 +65,7 @@ export const Calculator = () => {
             });
         } else if(state.operation) {
             setState({
-                prevOperand: String(evaluate(state)),
+                prevOperand: operation === '=' ? null : String(evaluate(state)),
                 currOperand: operation === '=' ? String(evaluate(state)) : '0',
                 operation: operation === '=' ? null : operation,
             });

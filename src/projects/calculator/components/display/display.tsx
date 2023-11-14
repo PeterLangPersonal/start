@@ -1,4 +1,4 @@
-import { DisplayWrapper } from "./display.styles";
+import { DisplayWrapper, PrevValueWrapper, ValueWrapper } from "./display.styles";
 
 type DisplayProps = {
     currOperand: string;
@@ -12,11 +12,12 @@ export const Display = ({
     operation,
 }: DisplayProps) => {
     return <DisplayWrapper>
-        <div>
+        <PrevValueWrapper>
             {prevOperand}
-        </div>
-        <div>
+            {operation}
+        </PrevValueWrapper>
+        <ValueWrapper>
             {currOperand}
-        </div>
+        </ValueWrapper>
     </DisplayWrapper>
 }

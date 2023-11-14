@@ -6,6 +6,7 @@ export const CalculatorPageWrapper = styled(AppWrapper)`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-image: linear-gradient(to bottom right, #A0D0CA, #E9A2A1);
 `;
 
 export const CalculatorWrapper = styled.div`

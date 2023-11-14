@@ -22,6 +22,7 @@ export const Projects = () => {
             imageUrl: phone,
         }, {
             title: projects.CALCULATOR,
+            imageUrl: 'https://www.shutterstock.com/image-vector/flat-calculator-vector-illustration-long-600nw-554850088.jpg',
         }
     ];
 
