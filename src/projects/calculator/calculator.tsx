@@ -52,7 +52,6 @@ export const Calculator = () => {
     }
 
     const onClickOperation = (operation: string) => {
-        console.log(state.currOperand);
         if(operation === 'AC') {
             setState({
                 prevOperand: null,
@@ -106,5 +105,5 @@ export const Calculator = () => {
             <Button icon='.' onClick={() => onClickDigit('.')}/>
             <Button icon='=' onClick={() => onClickOperation('=')} doubleSize={true}/>
         </CalculatorWrapper>
-    </CalculatorPageWrapper>
+    </CalculatorPageWrapper>;
 }

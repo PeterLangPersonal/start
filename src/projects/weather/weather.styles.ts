@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { AppWrapper } from "../projects.styles";
 
-export const CalculatorPageWrapper = styled(AppWrapper)`
+export const WeatherPageWrapper = styled(AppWrapper)`
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -9,9 +9,10 @@ export const CalculatorPageWrapper = styled(AppWrapper)`
     background-image: linear-gradient(to bottom right, #A0D0CA, #E9A2A1);
 `;
 
-export const CalculatorWrapper = styled.div`
+export const WeatherCardsWrapper = styled.div`
     display: flex;
     flex-direction: row;
-    width: min(100%, 400px);
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
 `;

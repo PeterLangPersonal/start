@@ -5,7 +5,7 @@ import phone from '../../assets/androidphones-2048px-N20front.webp'
 import { useAppContext } from "../../utils";
 import { PageContext, ProjectContext } from "../../context";
 import { projects } from "../../types";
-import { Calculator, SpeechToText } from "../../projects";
+import { Calculator, SpeechToText, Weather } from "../../projects";
 
 type project = {
     title: string;
@@ -18,11 +18,14 @@ export const Projects = () => {
 
     const projectCards = [
         {
-            title: projects.SPEECH_TO_TEXT,
-            imageUrl: phone,
-        }, {
             title: projects.CALCULATOR,
             imageUrl: 'https://www.shutterstock.com/image-vector/flat-calculator-vector-illustration-long-600nw-554850088.jpg',
+        }, {
+            title: projects.WEATHER,
+            imageUrl: 'https://st2.depositphotos.com/16122460/43379/i/450/depositphotos_433796374-stock-photo-photos-sky-different-weather-collage.jpg',
+        }, {
+            title: projects.SPEECH_TO_TEXT,
+            imageUrl: phone,
         }
     ];
 
@@ -39,6 +42,7 @@ export const Projects = () => {
             {project !== undefined && <BackButton onClick={() => setProject(undefined)}>←</BackButton>}
             {project === projects.SPEECH_TO_TEXT && <SpeechToText/>}
             {project === projects.CALCULATOR && <Calculator/>}
+            {project === projects.WEATHER && <Weather/>}
             {project === undefined && <>
                 <PinkSectionWrapper isMobile={isMobile}>
                     <ContentWrapper>
