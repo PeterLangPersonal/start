@@ -1,5 +1,5 @@
 import moment from "moment";
-import { Header, Temperature, TemperatureWrapper, WeatherCardWrapper } from "./weatherCard.styles";
+import { Condition, ConditionImage, Header, MaxTemp, MinTemp, Temperature, TemperatureWrapper, WeatherCardWrapper } from "./weatherCard.styles";
 
 type WeatherCardProps = {
     day: string;
@@ -21,12 +21,9 @@ export const WeatherCard = ({
 
     return <WeatherCardWrapper>
         <Header>{weekday.toUpperCase()}</Header>
-        <img src={icon} alt='weather'/>
-        <p>{weather}</p>
-        <TemperatureWrapper>
-            <Temperature>{Math.ceil(maxTemp)}</Temperature>
-            <Temperature>/</Temperature>
-            <Temperature>{Math.ceil(minTemp)}</Temperature>
-        </TemperatureWrapper>
+        <ConditionImage src={icon} alt='weather'/>
+        <Condition>{weather}</Condition>
+        <MaxTemp>{Math.ceil(maxTemp)}°C</MaxTemp>
+        <MinTemp>{Math.ceil(minTemp)}°C</MinTemp>
     </WeatherCardWrapper>
 }

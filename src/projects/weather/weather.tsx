@@ -17,9 +17,11 @@ type Location = {
     longitude: number;
 };
 
+const days = 7;
+
 export const Weather = () => {
     const storedWeather = localStorage.getItem('weather');
-    const lastDay = moment().add(4, 'days').format('YYYY-MM-DD');
+    const lastDay = moment().add(days-1, 'days').format('YYYY-MM-DD');
 
     const [ isLoading, setIsLoading ] = useState(true);
     const [ isLocationLoading, setIsLocationLoading ] = useState(true);
@@ -50,7 +52,7 @@ export const Weather = () => {
                         const data = await getForecast({
                             lat: location.latitude,
                             long: location.longitude,
-                            days: 5,
+                            days: days,
                         });
         
                         if(data) {
