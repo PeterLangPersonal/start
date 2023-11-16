@@ -3,10 +3,9 @@ import { AppWrapper } from "../projects.styles";
 
 export const WeatherPageWrapper = styled(AppWrapper)`
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
     background-image: linear-gradient(to bottom right, #A0D0CA, #E9A2A1);
+    overflow-y: auto;
 `;
 
 export const WeatherCardsWrapper = styled.div`

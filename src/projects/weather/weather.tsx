@@ -85,21 +85,19 @@ export const Weather = () => {
 
     return <WeatherPageWrapper>
         {isLoading && 'Loading'}
-        {!isLoading && (isError || currentWeather === undefined? 'Error' : 
-            <WeatherCardsWrapper>
-                {
-                    currentWeather.map((weatherInstance) => {
-                        return <WeatherCard
-                            day={weatherInstance.day}
-                            icon={weatherInstance.icon}
-                            weather={weatherInstance.weather}
-                            maxTemp={weatherInstance.maxTemp}
-                            minTemp={weatherInstance.minTemp}
-                            key={weatherInstance.day}
-                        />
-                    })
-                }
-            </WeatherCardsWrapper>
-        )}
+        {!isLoading && (isError || currentWeather === undefined? 'Error' : <WeatherCardsWrapper>
+            {
+                currentWeather.map((weatherInstance) => {
+                    return <WeatherCard
+                        day={weatherInstance.day}
+                        icon={weatherInstance.icon}
+                        weather={weatherInstance.weather}
+                        maxTemp={weatherInstance.maxTemp}
+                        minTemp={weatherInstance.minTemp}
+                        key={weatherInstance.day}
+                    />
+                })
+            }
+        </WeatherCardsWrapper>)}
     </WeatherPageWrapper>;
 }

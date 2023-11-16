@@ -7,7 +7,7 @@ type WeatherCardProps = {
     weather: string;
     maxTemp: number;
     minTemp: number;
-}
+};
 
 export const WeatherCard = ({
     day,

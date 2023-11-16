@@ -23,7 +23,6 @@ export const TemperatureWrapper = styled.div`
     flex-direction: row;
     justify-content: space-evenly;
     margin: 0;
-    /* background-color: black; */
     padding: 0px;
 `;
 
